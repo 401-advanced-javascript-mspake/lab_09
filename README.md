@@ -7,8 +7,6 @@
   
 ### Links and Resources  
 * [submission PR](https://github.com/401-advanced-javascript-mspake/lab_09/pull/1)  
-<!-- * [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable) -->
   
 #### Documentation  
 * [api docs](http://xyz.com) (API servers)
@@ -37,10 +35,13 @@
 #### `.env` requirements  
 * `PORT` - Port Number (ie: 3000)  
 * `MONGODB_URI` - URL to the running mongo instance/db (ie: mongodb://localhost:27017/databaseName)  
+* `DOCS_FILEPATH` - Local path to the location where the docs folder is saved. (ie: /home/user/path/to/docs)
 
 #### Running the app  
 * `npm start`  
+  
 Endpoints:  
+* `/` - Docs home page  
 * `/api/v1/:model`  
 * `/api/v1/:model`  
 * `/api/v1/:model/:id`  
@@ -48,4 +49,4 @@ Endpoints:
 * `/api/v1/:model/:id`  
   
 #### UML
-Link to an image of the UML for your application and response to events
+![uml](https://github.com/401-advanced-javascript-mspake/lab_09/blob/docs/assets/uml.jpeg)
