@@ -16,13 +16,6 @@ const router = express.Router();
 
 // router.use('/web/path/to/docs', express.static('path/to/docs/on/server'))
 
-router.use(express.static(process.env.DOCS_FILEPATH));
-
-router.use('/',(req, res) => {
-  console.log(cwd);
-  res.render('/index.html');
-});
-
 // Evaluate the model, dynamically
 router.param('model', modelFinder);
 
@@ -34,6 +27,13 @@ router.post('/api/v1/:model', handlePost);
 router.get('/api/v1/:model/:id', handleGetOne);
 router.put('/api/v1/:model/:id', handlePut);
 router.delete('/api/v1/:model/:id', handleDelete);
+
+router.use(express.static(process.env.DOCS_FILEPATH));
+router.use('/api/v1',(req, res) => {
+  console.log(cwd);
+  res.render('/index.html');
+});
+
 
 // Route Handlers
 
